@@ -1,0 +1,33 @@
+.wrapper-status {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 70px;
+  margin-bottom: 40px;
+}
+
+.sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+.wrapper-post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dots {
+  width: 100%;
+  background-image: var(--primary-gradient);
+  border-radius: 10px;
+  height: 4px;
+}
+
+.card-category {
+  margin-left: 16px;
+}
+
+.wrapper-slider {
+  margin-bottom: 80px;
+}

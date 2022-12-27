@@ -1,0 +1,42 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 0;
+
+  border-bottom: 1px solid var(--third-color);
+  .tag {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 26px;
+    height: 26px;
+
+    font-weight: 600;
+
+    border-radius: 50%;
+
+    &.getting-started {
+      background-color: #24b8e5;
+    }
+    &.technology {
+      background-color: #7169fe;
+    }
+    &.life-style {
+      background-color: #a552f2;
+    }
+    &.places {
+      background-color: #e534b9;
+    }
+    &.health {
+      background-color: #64ca13;
+    }
+  }
+}

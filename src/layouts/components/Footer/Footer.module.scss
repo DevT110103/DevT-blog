@@ -1,0 +1,11 @@
+.wrapper-tag-cloud {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 16px;
+
+  .tag-cloud {
+    font-size: 1.4rem;
+  }
+}

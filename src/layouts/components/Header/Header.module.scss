@@ -1,0 +1,31 @@
+.wrapper {
+  margin-bottom: 60px;
+}
+
+.title {
+  position: relative;
+
+  margin-bottom: 80px;
+
+  text-align: center;
+
+  font-family: 'Bungee', cursive;
+  font-size: 6rem;
+
+  text-shadow: 3px 3px 0 var(--second-color);
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+
+    transform: translateX(-50%);
+
+    height: 4px;
+    width: 190px;
+
+    background: var(--primary-gradient);
+  }
+}

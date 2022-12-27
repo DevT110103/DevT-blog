@@ -1,0 +1,31 @@
+.wrapper {
+  animation: fade 0.3s linear;
+}
+
+.icon-loading {
+  font-size: 72px;
+
+  color: var(--second-color);
+
+  animation: spinner 1s ease-in-out infinite;
+  text-align: center;
+  width: 100%;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
