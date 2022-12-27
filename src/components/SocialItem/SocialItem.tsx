@@ -13,11 +13,12 @@ interface PropsTypeSocialItem {
   to?: string;
   rel?: string;
   icon: React.ReactNode;
+  title?: string;
 }
 
-function SocialItem({ target, href, rel, icon, to }: PropsTypeSocialItem) {
+function SocialItem({ target, href, rel, icon, to, title }: PropsTypeSocialItem) {
   return (
-    <div className={cx('wrapper')}>
+    <div className={cx('wrapper')} title={title}>
       {!!to ? (
         <Link to={to}>
           <div className={cx('icon')}>{icon}</div>

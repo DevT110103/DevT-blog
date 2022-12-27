@@ -1,0 +1,23 @@
+.wrapper {
+  .control {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 1.8rem;
+
+    padding: 8px;
+
+    background-color: transparent;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--second-color);
+    }
+    .icon {
+    }
+    .text {
+    }
+  }
+}

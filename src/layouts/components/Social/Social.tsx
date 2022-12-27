@@ -1,15 +1,17 @@
 import { faFacebookF, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faCarAlt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Tippy from '@tippyjs/react';
+import Tippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
-import { Link } from 'react-router-dom';
-import configs from '~/configs';
 
+import configs from '~/configs';
 import styles from './Social.module.scss';
 import SocialItem from '~/components/SocialItem';
 import { CurrentUser as ICurrentUser } from '~/interfaces';
 import CurrentUser from '~/components/CurrentUser';
+import { Wrapper as PopperWrapper } from '~/components/Popper';
+import MenuControl from '~/components/MenuControl';
+import { Link } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -45,9 +47,31 @@ function Social({ currentUser }: TypePropsSocial) {
 
           <div className={cx('login-inner')}>
             {Object.keys(currentUser).length > 0 ? (
-              <CurrentUser avatar="https://picsum.photos/200"></CurrentUser>
+              <Tippy
+                interactive
+                offset={[0, 10]}
+                render={(attrs) => {
+                  return (
+                    <div className={cx('menu-item')} {...attrs} tabIndex={-1}>
+                      <PopperWrapper>
+                        <MenuControl></MenuControl>
+                      </PopperWrapper>
+                    </div>
+                  );
+                }}
+              >
+                <div>
+                  <Link to={configs.routes.author}>
+                    <CurrentUser avatar="https://picsum.photos/200"></CurrentUser>
+                  </Link>
+                </div>
+              </Tippy>
             ) : (
-              <SocialItem to={configs.routes.login} icon={<FontAwesomeIcon className={cx('icon')} icon={faUser} />}></SocialItem>
+              <SocialItem
+                title="Login"
+                to={configs.routes.login}
+                icon={<FontAwesomeIcon className={cx('icon')} icon={faUser} />}
+              ></SocialItem>
             )}
           </div>
         </div>

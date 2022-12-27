@@ -24,14 +24,12 @@ function Login() {
 
   const handleChangeUserName = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    console.log('value ->', value);
 
     setUserName(value);
   };
 
   const handleChangePassword = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    console.log('value ->', value);
 
     setPassword(value);
   };
@@ -53,7 +51,7 @@ function Login() {
           </Link>
         </Tippy>
       </div>
-      <input type="checkbox" id="chk" checked={toggleLogin} aria-hidden="true" className={cx('chk')} />
+      <input type="checkbox" readOnly id="chk" checked={toggleLogin} aria-hidden="true" className={cx('chk')} />
       <div className={cx('register')}>
         <div className={cx('form-group')}>
           <label
