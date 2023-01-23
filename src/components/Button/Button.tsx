@@ -12,18 +12,24 @@ interface PropsType {
   children: any;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   to?: string;
+  disable?: boolean;
 }
 
-function Button({ primary = true, solid, className = '', children, onClick, to = '#' }: PropsType) {
+function Button({ primary = true, solid, className = '', children, onClick, to = '#', disable }: PropsType) {
   const classes = cx('btn', {
     primary,
     solid,
     [className]: className,
+    disable,
   });
-
+  if (disable) {
+    onClick = () => {
+      return undefined;
+    };
+  }
   return (
     <div className={cx('wrapper')}>
-      <button className={classes} onClick={onClick}>
+      <button disabled={disable} className={classes} onClick={onClick}>
         <Link to={to} className={cx('content')}>
           {children}
         </Link>

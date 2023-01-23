@@ -55,6 +55,7 @@ function Login() {
       <div className={cx('register')}>
         <div className={cx('form-group')}>
           <label
+            className={cx('label')}
             onClick={() => {
               setToggleLogin(!toggleLogin);
             }}
@@ -72,6 +73,7 @@ function Login() {
       <div className={cx('log-in')}>
         <div className={cx('form-group')}>
           <label
+            className={cx('label')}
             onClick={() => {
               setToggleLogin(!toggleLogin);
             }}

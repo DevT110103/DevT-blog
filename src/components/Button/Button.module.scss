@@ -25,6 +25,17 @@
       box-shadow: 2px 1000px 1px var(--primary-gradient) inset;
     }
   }
+
+  &.disable {
+    opacity: 0.7;
+
+    background-image: unset;
+
+    &:hover {
+      box-shadow: unset;
+    }
+  }
+
   &::after {
     content: '';
     position: absolute;

@@ -31,10 +31,7 @@ function Author() {
         >
           <div className={cx('wrapper-avatar')}>
             <div className={cx('avatar')}>
-              <img
-                src="https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/311977866_1754859381580827_3197983757486709313_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=CWyJW4MVTr0AX9ftHR6&_nc_oc=AQncOBKdzzHc_QNOyXRyQgavXGWl1CTolq3A2m9cORWxnzJ576DCbPgw0KH7VBeSlAE&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfDQCoitEKBvk5vktUKdC-KAOuyUvo9sZWrFfBemX89eBw&oe=63A6435D"
-                alt=""
-              />
+              <img src="https://picsum.photos/1440" alt="" />
             </div>
             <div className={cx('wrapper-control')}>
               <div className={cx('short-info')}>
