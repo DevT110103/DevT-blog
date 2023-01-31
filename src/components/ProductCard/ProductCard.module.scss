@@ -1,0 +1,53 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  overflow: hidden;
+
+  .top-card {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--second-color);
+
+    &:hover {
+      cursor: pointer;
+      > img {
+        transform: scale(1.1);
+      }
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border-radius: inherit;
+
+      transition: all 0.5s linear;
+    }
+  }
+
+  .mid-card {
+    .title {
+      .link {
+        opacity: 1;
+      }
+    }
+  }
+
+  .bot-card {
+    .desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 export interface PropsTypePostCard {
+  id?: string | number;
   image?: string;
   dateTime: string;
   userName: string;

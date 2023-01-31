@@ -1,5 +1,5 @@
 export interface NavList {
-  id: number;
+  id: string;
   name: string;
   link: string;
 }

@@ -1,20 +1,21 @@
 import configs from '~/configs';
 import { NavList } from '~/interfaces';
+import uuid from 'react-uuid';
 
 export const navList: NavList[] = [
   {
-    id: 1,
-    name: 'Home',
+    id: uuid(),
+    name: 'Trang chủ',
     link: configs.routes.home,
   },
   {
-    id: 2,
-    name: 'Blog',
+    id: uuid(),
+    name: 'Sản phẩm của mình',
     link: configs.routes.blog,
   },
   {
-    id: 3,
-    name: 'Author',
+    id: uuid(),
+    name: 'Tác giả',
     link: configs.routes.author,
   },
 ];

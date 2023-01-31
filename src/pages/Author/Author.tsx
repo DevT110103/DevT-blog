@@ -6,11 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserPlus, faWrench } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import CardTus from '~/components/CardTus';
-import PostCard from '~/components/PostCard';
 import { Col, Row } from 'antd';
 import SideBarInfo from '~/components/SideBarInfo';
 import { useSelector } from 'react-redux';
 import { RootState } from '~/redux/store';
+import avatar from '~/assets/images/tus1.jpg';
 
 const cx = classNames.bind(styles);
 
@@ -31,7 +31,7 @@ function Author() {
         >
           <div className={cx('wrapper-avatar')}>
             <div className={cx('avatar')}>
-              <img src="https://picsum.photos/1440" alt="" />
+              <img src={avatar} alt="" />
             </div>
             <div className={cx('wrapper-control')}>
               <div className={cx('short-info')}>

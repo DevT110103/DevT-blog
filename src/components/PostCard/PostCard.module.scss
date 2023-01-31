@@ -17,6 +17,10 @@
       order: 1;
     }
   }
+
+  & + .wrapper {
+    margin-top: 15px;
+  }
 }
 
 .wrapper-content {
