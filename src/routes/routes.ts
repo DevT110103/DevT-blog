@@ -8,6 +8,9 @@ import Login from '~/pages/Login';
 import LoginLayout from '~/layouts/LoginLayout';
 import AdminLayout from '~/layouts/AdminLayout';
 import Admin from '~/pages/Admin';
+import ProductDetail from '~/pages/ProductDetail';
+import AddProduct from '~/pages/AddProduct/AddProduct';
+import AddLayout from '~/layouts/AddLayout';
 
 const publicRoutes: Routes[] = [
   {
@@ -34,6 +37,16 @@ const privateRoutes: Routes[] = [
     path: configs.routes.admin,
     component: Admin,
     layout: AdminLayout,
+  },
+  {
+    path: configs.routes.productDetail,
+    component: ProductDetail,
+    layout: AdminLayout,
+  },
+  {
+    path: configs.routes.addProduct,
+    component: AddProduct,
+    layout: AddLayout,
   },
 ];
 

@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import { NavList } from '~/interfaces';
 
 import styles from './Navigation.module.scss';
-import { useSelector } from 'react-redux';
-import { RootState } from '~/redux/store';
 
 const cx = classNames.bind(styles);
 
@@ -13,9 +11,7 @@ interface PropsType {
 }
 
 function Navigation({ list }: PropsType) {
-  const currentUser = useSelector((state: RootState) => {
-    return state.auth.login.currentUser;
-  });
+  const currentUser = {};
 
   return (
     <div className={cx('wrapper')}>
@@ -40,7 +36,7 @@ function Navigation({ list }: PropsType) {
               return cx('nav-item', { active: nav.isActive });
             }}
           >
-            Admin
+            Quản trị viên
           </NavLink>
         )}
       </nav>

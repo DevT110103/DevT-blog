@@ -1,0 +1,95 @@
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  background: var(--primary-gradient);
+
+  border-radius: 10px;
+
+  height: 267px;
+  .top-card {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 207px;
+    &:hover {
+      cursor: pointer;
+      > img {
+        opacity: 0.9;
+        transform: scale(1.1);
+      }
+    }
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      border-radius: inherit;
+
+      transition: all 0.5s linear;
+    }
+  }
+
+  .mid-card {
+    padding: 0 16px;
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      width: 100%;
+      .link {
+        display: block;
+        width: 100%;
+        opacity: 1;
+        font-size: 2.4rem;
+
+        line-height: 1.2;
+        text-transform: uppercase;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+    }
+  }
+
+  .wrapper-control {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    .btn {
+      width: 40px;
+      padding: 5px;
+      border-radius: 5px;
+      z-index: 99;
+
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        transform: scale(0.9);
+      }
+
+      &.delete {
+        background: red;
+      }
+
+      &.edit {
+        background-color: aqua;
+      }
+    }
+  }
+}

@@ -8,14 +8,10 @@ import CardCategory from '~/components/CardCategory';
 import { PropsTypePostCard } from '~/components/PostCard/interfaces';
 import SideBar from '~/components/SideBar';
 import Pagination from '~/components/Pagination';
-import Loading from '~/components/Loading';
 
 import { postCardList } from './store';
 import SpacePost from './SpacePost';
 import styles from './Home.module.scss';
-import TitleBar from '~/components/TitleBar';
-import PostCardCircle from '~/components/PostCardCircle';
-import TagCloud from '~/components/TagCloud';
 
 const cx = classNames.bind(styles);
 

@@ -1,0 +1,25 @@
+.wrapper {
+  padding: 10px 0 30px 0;
+
+  .btn-back {
+    background-color: transparent;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    text-transform: uppercase;
+
+    opacity: 1;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .link {
+      opacity: 1;
+      .icon {
+        font-size: 30px;
+      }
+    }
+  }
+}
