@@ -2,3 +2,54 @@
   pointer-events: none;
   user-select: none;
 }
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  overflow: hidden;
+
+  .title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    opacity: 1;
+  }
+
+  .desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+  }
+
+  .img-preview {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    height: 500px;
+  }
+}
+
+.wrapper-control {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .btn-upload {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: var(--primary-gradient);
+    width: 30%;
+    border-radius: 10px;
+    padding: 8px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

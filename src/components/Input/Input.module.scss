@@ -1,0 +1,38 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .input {
+    border-radius: 10px;
+    padding: 10px 20px;
+
+    font-weight: 700;
+
+    color: var(--third-color);
+
+    outline: none;
+    border: none;
+  }
+
+  .label {
+    position: relative;
+    font-size: 1.6rem;
+
+    &.required {
+      &::after {
+        content: '*';
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        color: red;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  & + .wrapper {
+    margin-top: 20px;
+  }
+}
